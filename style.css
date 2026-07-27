@@ -1,0 +1,11 @@
+.button {
+    width: 100px;
+    height: 25px;
+    background: lightblue;
+}
+
+.Result {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
