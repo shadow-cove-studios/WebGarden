@@ -2,37 +2,36 @@ console.log("test")
 
 var clickOrder = []
 
-function clicka(bid) {
-    console.log("Button Clicked")
+var validPlots = ["plot1"]
 
-    if (clickOrder.length == 2) {
-        clickOrder = []
-    }
+var seed = []
 
-    clickOrder.push(bid)
-    checkClick()
+var plot1Planted = ""
+
+
+function clickSeed(sid,color) {
+    console.log("seed Clicked!",sid)
+    seed = [sid,color]
 }
 
-function checkClick() {
-    console.log(clickOrder.length)
-    console.log(clickOrder.length == 2)
-    console.log(clickOrder[0] == 1)
-    console.log(clickOrder[1] == 2)
+function plantSeed(plotid) {
+   
     if (
-        clickOrder.length == 2 &&
-        clickOrder[0] == 1 &&
-        clickOrder[1] == 2
+        validPlots.includes(plotid) && seed != []
     ) {
         var element = document.querySelector('.Result')
-        element.style.backgroundColor = 'yellow';
+        
+        element.style.backgroundColor = seed[1];
         console.log("Passed")
+        plot1Planted = seed[0]
+
     } else if (
-        clickOrder.length == 2 &&
-        clickOrder[0] != 1 ||
-        clickOrder[1] != 2
+        validPlots.includes(plotid)==false
     ) {
         var element = document.querySelector('.Result')
-        element.style.backgroundColor = 'red';
+        element.style.backgroundColor = 'brown';
+
         console.log("Failed")
+        seed = []
     }
 }

@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+.testbtn1 {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.testbtn1:hover {
+  background-color: green;
+}
+</style>
+<style>
+.testbtn2 {
+  background-color: goldenrod;
+  color: white;
+  font-size: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.testbtn:hover {
+  background-color: goldenrod;
+}
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebGarden</title>
@@ -8,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <button id="Test Button 1" class="button" onclick="clicka(1)"> </button>
-    <button id="Test Button 2" class="button" onclick="clicka(2)"> </button>
+    <button id="flax1" class="testbtn1" onclick="clickSeed('flax1','green')"> </button>
+    <button id="flax2" class="testbtn2" onclick="clickSeed('flax2','yellow')"></button>
+    <button id="plot1" class="button" onclick="plantSeed('plot1')"> </button>
     <div class="Result"> test </div>
 </body>
 </html>
