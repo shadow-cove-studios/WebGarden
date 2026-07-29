@@ -29,7 +29,7 @@ jobs:
       - name: Install Pygbag
         run: |
           python -m pip install --upgrade pip
-          pip install pygbag
+          pip install pygame-ce pygbag
 
       - name: Compile Pygame to WebAssembly
         run: |
