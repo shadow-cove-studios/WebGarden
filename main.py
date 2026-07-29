@@ -3,7 +3,7 @@ import asyncio  # Required for web compatibility
 
 # Initialize game elements
 pygame.init()
-screen = pygame.display.set_size((800, 600))
+screen = pygame.display.set_mode((800, 600))
 
 async def main():
     running = True
