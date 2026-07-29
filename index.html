@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Display Info -->
-    <title>Pygame in Browser</title>
+    <title> Web Garden </title>
 
     <!-- PyScript styles and bootstrap modules -->
     <link rel="stylesheet" href="https://pyscript.net/releases/2025.2.1/core.css">
@@ -25,11 +25,7 @@
             image-rendering: pixelated;
         }
 
-        .border-1,
-        .border-2,
-        .border-3,
-        .border-4,
-        .border-5 {
+        .border-1, .border-2, .border-3, .border-4, .border-5 {
             box-sizing: border-box;
             width: 100%;
             height: 100%;
@@ -49,12 +45,13 @@
     </style>
 </head>
 <body>
+    <!-- These div's are here to draw the border of the website for aesthetic -->
     <div class="border-1">
         <div class="border-2">
             <div class="border-3">
                 <div class="border-4">
                     <div class="border-5">
-                        <!-- Pygame will target this canvas tag automatically -->
+                        <!-- [ PyGame ] PyGame will target this canvas tag automatically -->
                         <canvas id="canvas"></canvas>
                     </div>
                 </div>
@@ -62,7 +59,28 @@
         </div>
     </div>
     
-    <!-- This is where the async python game script is linked -->
+    <!-- [ PyGame ] This code calls the async game script (main.py) as type "py-game" to initialize it. -->
     <script type="py-game" src="main.py"></script>
+
+    <!-- [ Force title post load ] -- Pygame overwrites it so this code fixes it after pygame does so. -->
+    <script>
+        // Observe if document title suddently doesnt match "Web Garden"
+        const titleObserver = new MutationObserver(() => {
+            if (document.title !== "Web Garden") {
+                document.title = "Web Garden";
+            }
+        });
+
+        // If title doesnt match "Web Garden" do the following:
+
+        // 1) Query the title
+        titleObserver.observe(
+            document.querySelector("title"),
+            { childList: true }
+        );
+
+        // 2) Change the title to "Web Garden"
+        document.title = "Web Garden";
+    </script>
 </body>
 </html>
