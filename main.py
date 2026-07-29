@@ -13,6 +13,7 @@ async def main():
                 return
 
         screen.fill((255, 0, 255))
+        print("Tick")
         pygame.display.flip()
 
         clock.tick(60)
