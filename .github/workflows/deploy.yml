@@ -24,7 +24,8 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-cache-dependency-path: "" # Bypasses pip lockfile requirements
+          python-version: "3.12"
+          cache: "pip"
 
       - name: Install Pygbag
         run: |
