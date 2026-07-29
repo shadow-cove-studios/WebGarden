@@ -12,7 +12,7 @@ async def main():
             if event.type == pygame.QUIT:
                 running = False
                 
-        screen.fill((0, 0, 20))
+        screen.fill((0, 0, 255))      # Bright blue
         pygame.display.flip()
         
         # CRITICAL: Gives control back to the browser thread
