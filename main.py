@@ -13,7 +13,6 @@ async def main():
                 running = False
         
         screen.fill((30, 30, 30)) # Dark gray background
-        #print("Tick")
         pygame.display.flip()
         
         # CRITICAL: This allows the browser to render frames without crashing
