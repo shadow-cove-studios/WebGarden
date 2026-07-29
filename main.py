@@ -1,17 +1,15 @@
 import pygame
 import asyncio
 
-print("HELLO FROM PYTHON")
-
 pygame.init()
 
 screen = pygame.display.set_mode((800, 600))
-screen.fill((255, 0, 255))
-pygame.display.flip()
 
 async def main():
     while True:
+        screen.fill((255, 0, 255))
+        pygame.display.flip()
         print("tick")
-        await asyncio.sleep(1)
+        await asyncio.sleep(0)
 
-asyncio.run(main())
+main()
