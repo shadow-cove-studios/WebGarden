@@ -10,12 +10,57 @@
     <!-- PyScript styles and bootstrap modules -->
     <link rel="stylesheet" href="https://pyscript.net/releases/2025.2.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2025.2.1/core.js"></script>
+
+    <!-- Style -->
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            background-image: url("assets/ground-1.png");
+            background-repeat: repeat;
+            background-size: 64px 64px;
+            image-rendering: pixelated;
+        }
+
+        .border-1,
+        .border-2,
+        .border-3,
+        .border-4,
+        .border-5 {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+        }
+
+        .border-1 { border: 5px solid #a08662; }
+        .border-2 { border: 5px solid #c7b08b; }
+        .border-3 { border: 5px solid #e4d2aa; }
+        .border-4 { border: 5px solid #c7b08b; }
+        .border-5 { border: 5px solid #a08662; }
+
+        #canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Web Garden</h1>
-
-    <!-- Pygame will target this canvas tag automatically -->
-    <canvas id="canvas"></canvas> 
+    <div class="border-1">
+        <div class="border-2">
+            <div class="border-3">
+                <div class="border-4">
+                    <div class="border-5">
+                        <!-- Pygame will target this canvas tag automatically -->
+                        <canvas id="canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- This is where the async python game script is linked -->
     <script type="py-game" src="main.py"></script>
