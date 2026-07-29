@@ -1,22 +1,17 @@
 import pygame
-import asyncio  # Required for web compatibility
+import asyncio
 
-# Initialize game elements
+print("HELLO FROM PYTHON")
+
 pygame.init()
+
 screen = pygame.display.set_mode((800, 600))
+screen.fill((255, 0, 255))
+pygame.display.flip()
 
 async def main():
-    running = True
-    while running:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
-                
-        screen.fill((0, 0, 255))      # Bright blue
-        pygame.display.flip()
-        
-        # CRITICAL: Gives control back to the browser thread
-        await asyncio.sleep(0) 
+    while True:
+        print("tick")
+        await asyncio.sleep(1)
 
-# Start the event loop execution
 asyncio.run(main())
