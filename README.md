@@ -4,4 +4,4 @@
 </p>
 
 # WebGarden
-Welcome to WebGarden, a browser-based farming game powered by Python and Pygame, with PyScript bridging the game engine and HTML interface.
+Welcome to WebGarden, a browser-based farming game powered by both Python and PyGame, which uses PyScript to bridge the game engine and HTML interface.
