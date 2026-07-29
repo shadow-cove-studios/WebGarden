@@ -12,4 +12,4 @@ async def main():
         print("tick")
         await asyncio.sleep(0)
 
-main()
+asyncio.run(main())
