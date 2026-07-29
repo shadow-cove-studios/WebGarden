@@ -1,0 +1,56 @@
+<svg fill="none" viewBox="0 0 600 150" width="100%" height="150" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="100%">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <style>
+                .root {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .border-1, .border-2, .border-3, .border-4, .border-5 {
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .border-1 {
+                    border: 5px solid #a08662;
+                    background: #3b2f22;
+                }
+
+                .border-2 { border: 5px solid #c7b08b; }
+                .border-3 { border: 5px solid #e4d2aa; }
+                .border-4 { border: 5px solid #c7b08b; }
+
+                .border-5 {
+                    border: 5px solid #a08662;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .content {
+                    font-family: "Courier New", monospace;
+                    font-size: 48px;
+                    font-weight: bold;
+                    color: #f0f6fc;
+                    text-shadow: 2px 2px #000;
+                }
+            </style>
+
+            <div class="border-1">
+                <div class="border-2">
+                    <div class="border-3">
+                        <div class="border-4">
+                            <div class="border-5">
+                                <div class="content">
+                                    Game Engine
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </foreignObject>
+</svg>
